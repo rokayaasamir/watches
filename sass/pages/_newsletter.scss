@@ -1,0 +1,47 @@
+.newsletter {
+  .newsletter-box {
+    background-color: var(--primary-color);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    row-gap: 2.5rem;
+    @media screen and (min-width: 767px) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: initial;
+        column-gap: 2rem;
+        padding: 4.5rem;
+      }
+    }
+    .newsletter-title {
+      font-size: var(--h1-font-size);
+      color: #262626;
+      margin-bottom: 1.5rem;
+    }
+    .newsletter-description {
+      color: hsl(0, 0%, 35%);
+    }
+    .newsletter-subscribe {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.75rem;
+      @media screen and (min-width: 767px) {
+        & {
+          flex-direction: row;
+        }
+      }
+      .newsletter-input {
+        border: none;
+        outline: none;
+        padding: 1.25rem 1rem;
+        background-color: #f0f0f0;
+        color: #262626;
+        @media screen and (min-width: 767px) {
+          & {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

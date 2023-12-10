@@ -1,0 +1,38 @@
+/*=============== THEME ===============*/
+body.dark-theme{
+  --primary-color: #efbe8a;
+  --button-color: #3d3d3d;
+  --button-color-alt: #474747;
+  --title-color: #f2f2f2;
+  --text-color: #bfbfbf;
+  --body-color: #1f1f1f;
+  --container-color: #292929;
+  --border-color: #333333;
+}
+
+.change-theme {
+  color: var(--title-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.dark-theme .change-theme,
+.dark-theme .nav-toggle,
+.dark-theme .nav-shop,
+.dark-theme .button-gray{
+  color: #262626;
+}
+
+.dark-theme .scroll-header{
+  box-shadow: 0 1px 4px #0a0a0a4d;
+}
+
+.scroll-header .change-theme,
+.scroll-header .nav-toggle,
+.scroll-header .nav-shop{
+  color: var(--title-color);
+}
+
+.dark-theme::-webkit-scrollbar{
+  background: #4d4d4d;
+}

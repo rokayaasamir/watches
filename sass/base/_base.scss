@@ -1,0 +1,142 @@
+/*=============== BASE ===============*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body{
+  margin: 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.4s;
+}
+h1,h2,h3,h4{
+  color: var(--title-color);
+  font-weight: var(--font-medium);  
+}
+
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container{
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  @media screen and (max-width: 320px) {
+    & {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    & {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.grid{
+  display: grid;
+}
+
+.main{
+  overflow: hidden;
+}
+
+.section{
+  padding: 6.5rem 0 1rem;
+  @media screen and (min-width: 767px) {
+    & {
+      padding: 8rem 0 1rem;
+    }
+  }
+  &-title{
+    position: relative;
+    font-size: var(--h3-font-size);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    @media screen and (min-width: 992px) {
+      & {
+        font-size: var(--h2-font-size)
+      }
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 67px;
+      height: 1px;
+      background-color: var(--primary-color);
+    }
+  }
+}
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 12px hsla(0, 0%, 20%, 0.1);
+  display: inline-flex;
+  padding: 0.25rem;
+  z-index: var(--z-tooltip);
+  opacity: 0.8;
+  transition: 0.3s;
+  @media screen and (min-width: 1024px) {
+    & {
+      right: 3rem;
+    }
+  }
+  &:hover {
+    opacity: 1;
+  }
+  .scrollup-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+}
+
+.show-scroll {
+  bottom: 3rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(0, 0%, 74%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 17%);
+}

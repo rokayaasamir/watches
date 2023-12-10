@@ -1,0 +1,41 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root{
+  /*========== Colors ==========*/
+  --primary-color: #ffb566;
+  --button-color: #2b2b2b;
+  --button-color-alt: #363636;
+  --title-color: #262626;
+  --text-color: #595959;
+  --text-color-light: #8c8c8c;
+  --body-color: #fcfcfc;
+  --container-color: #fff;
+  --border-color: #f0f0f0;
+  /*========== Font and typography ==========*/
+  --body-font: 'Roboto', sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  // Responsive typography
+  @media screen and (min-width: 968px){
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-bold: 700;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
